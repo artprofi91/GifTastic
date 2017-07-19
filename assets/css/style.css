@@ -1,0 +1,225 @@
+/*create background image*/
+body { 
+   background: url(../images/field.jpg) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+
+}
+
+ /* the html and body elements cannot have any padding or margin */
+html,
+body {
+  height: 100%;
+}
+
+/* wrap for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+    /* Pad bottom by footer height */
+    padding: 0 0 60px;
+}
+
+/* set the fixed height of the footer here */
+#footer {
+    padding-top: 20px;
+    height: 60px !important;
+    background-color: #73C444;
+    color:#FEE9B4;
+    width: 100% !important;
+}
+
+/*buttons with soccer player look cool*/
+.btn {
+    margin: 5px;
+}
+
+/*create color for buttons with soccer players*/
+.btn-warning {
+    background-color: #73C444 !important;
+    color: #FEE9B4 !important;
+    border-color:  #FEE9B4 !important;
+}    
+
+/*add a bittom space between buttons and add a soccer player*/
+#buttonHolder {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+/*color for rating*/
+#gifHolder {
+    color: #FEE9B4;
+    font-weight: bold;
+}
+
+/*width of input equal for full width's div*/
+#player-input {
+    width: 100%;
+}
+
+/*click to add button */
+#addPlayer {
+    margin-top: 10px;
+    background-color: #FEE9B4;
+}
+
+/*.gif and img locate gif images on the page*/
+.gif {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+img {
+    margin-right: 5px;
+    height: 200px;
+    width: 350px;
+    padding: 5px;
+}
+
+/*add a soccer player color*/
+label {
+    color: #FEE9B4;
+}
+
+
+@-webkit-keyframes bounce {
+
+    0% {
+        -webkit-transform:translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform:translateX(15%);
+        opacity: 0.5;
+        padding-right: 50px;
+    }
+    100% {
+        -webkit-transform:translateX(0%);
+        opacity: 1;
+    }
+}
+
+label, #player-input, #addPlayer, .copyright {
+    /*cross browser functionality*/
+    -webkit-animation: bounce 800ms ease-in-out;
+    -moz-animation: bounce 800ms ease-in-out;
+    -o-animation: bounce 800ms ease-in-out;
+    animation: bounce 1800ms ease-in-out;
+    
+}
+/*soccer ball instead of cursor*/
+html, body, .btn-warning, label, #player-input, #addPlayer, .btn-lg {
+    cursor:url(../images/cursor.png), auto !important;
+}
+
+
+/*CREATE COOL BORDER*/
+.btn-warning {
+    box-shadow: inset 0 0 0 2px #73C444;
+    color: #f45e61;
+}
+
+/*very important for border on buttons not on whole window*/
+.btn-warning {
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-warning::before, .btn-warning::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    border: 4px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.btn-warning::before {
+    top: 0;
+    left: 0;
+    border-top-color: #FEE9B4;
+    border-right-color: #FEE9B4;
+    animation: border 2s infinite;
+}
+
+.btn-warning::after {
+    bottom: 0;
+    right: 0;
+    animation: border 2s 1s infinite, borderColor 2s 1s infinite;
+}
+
+@keyframes border {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    25% {
+        width: 100%;
+        height: 0;
+    }
+    50% {
+        width: 100%;
+        height: 100%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+@keyframes borderColor {
+    0% {
+        border-bottom-color: #FEE9B4;
+        border-left-color: #FEE9B4;
+    }
+    50% {
+        border-bottom-color: #FEE9B4;
+        border-left-color: #FEE9B4;
+    }
+    51% {
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    100% {
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+/*================ modal error1 and error2========*/
+.error1-body,
+.error2-body {
+    background-color: #FEE9B4; 
+
+}
+.modal-header,
+.modal-footer {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    background-color: #73C444;
+    color: #FEE9B4;
+}
+.modal-title {
+    font-size: 30px;
+}
+.btn-lg {
+    background-color: #73C444;
+}
+
+.error1,
+.error2 {
+    color: #73C444 ;
+    font-size: 20px;
+    background-color: #FEE9B4;
+}
+/*=========end of modal error1 and error2============*/
+
+
+
+
+
+
